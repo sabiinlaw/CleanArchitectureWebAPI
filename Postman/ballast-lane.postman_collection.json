@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "12dfdb71-7a21-4eb4-b20d-973b60def7a9",
+		"name": "ballast-lane",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1852235"
+	},
+	"item": [
+		{
+			"name": "GetProductById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44378/product/64fb6257-c2a0-45da-8374-cf3bf5bded27",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44378",
+					"path": [
+						"product",
+						"64fb6257-c2a0-45da-8374-cf3bf5bded27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44378/product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44378",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "Number",
+							"value": "8572648704869",
+							"disabled": true
+						},
+						{
+							"key": "Price",
+							"value": "82",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"number\": \"12345606\",\r\n  \"price\": 10.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44378/product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44378",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"login\": \"o'kon\",\r\n  \"password\": 10.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44378/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44378",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"number\": \"12345www6\",\r\n  \"price\": 10.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44378/product/64fb6257-c2a0-45da-8374-cf3bf5bded27",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44378",
+					"path": [
+						"product",
+						"64fb6257-c2a0-45da-8374-cf3bf5bded27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44378/product/64fb6257-c2a0-45da-8374-cf3bf5bded27",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44378",
+					"path": [
+						"product",
+						"64fb6257-c2a0-45da-8374-cf3bf5bded27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44378/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44378",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
