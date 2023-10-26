@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  aspnetrestapicontainer.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "80"
+      - "443"
+      - "44378:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+    depends_on:
+      - db
+  db:
+    container_name: AspNetRestApiContainerDb
+    environment:
+        SA_PASSWORD: "Test1234"
+        ACCEPT_EULA: "Y"
+    restart: always
+    ports:
+        - "1433:1433"
